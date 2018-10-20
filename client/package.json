@@ -15,6 +15,9 @@
 		"react-dropzone": "^5.1.0",
 		"react-helmet": "^5.2.0",
 		"react-pdf": "^3.0.5",
+		"react-reader": "^0.17.1",
+		"styled-components": "^4.0.2",
+		"styled-components-breakpoint": "^2.1.0",
 		"wait-on": "^3.0.1"
 	},
 	"scripts": {

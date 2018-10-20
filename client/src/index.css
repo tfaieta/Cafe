@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  background-color: #222233;;
+  background-color: #0F111A;;
   font-family: Tahoma, sans-serif;
 }
 
@@ -72,7 +72,7 @@ body {
 header {
   background-color: #111	;
   left: 0;
-  width: 70px;
+  width: 7%;
   position: fixed;
   height: 100%;
   padding: 0;
