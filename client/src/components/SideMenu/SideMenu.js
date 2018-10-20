@@ -14,8 +14,7 @@ export default class SideMenu extends Component {
     }
 
     zoomIn() {
-      
-
+            // TODO: Pass props in and zoom in
     }
 
     zoomOut() {
