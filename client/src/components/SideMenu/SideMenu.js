@@ -4,7 +4,17 @@ import ColorSwitcher from '../ColorSwitcher/ColorSwitcher';
 
 export default class SideMenu extends Component {
 
+    constructor() {
+      super()
+
+      this.zoomIn = this.zoomIn.bind(this)
+      this.zoomOut = this.zoomOut.bind(this)
+      this.showLibrary = this.showLibrary.bind(this)
+      this.highlight = this.highlight.bind(this)
+    }
+
     zoomIn() {
+      
 
     }
 
@@ -22,7 +32,7 @@ export default class SideMenu extends Component {
 
     render() {
         return (
-        <div> 
+        <div>
             <header>
             <Button type="zoom-in" onClick={this.zoomIn}/>
             <Button type="zoom-out" onClick={this.zoomOut}/>
