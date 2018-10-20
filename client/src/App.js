@@ -28,7 +28,7 @@ class App extends Component {
       return (
       <div className={this.state.switchColor ? "" : "sepia"}>
         {/* TESTS API
-        <div style={{justifyContent: "center", alignItems: "center",  marginTop: 35}}>>
+          <div style={{justifyContent: "center", alignItems: "center",  marginTop: 35}}>>
           <p>USERS</p>
           <ul> {
             this.state.users.map(user =>
