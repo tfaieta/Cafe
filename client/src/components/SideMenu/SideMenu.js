@@ -8,7 +8,17 @@ export default class SideMenu extends Component {
 
     }
 
+    zoomOut() {
 
+    }
+
+    showLibrary() {
+
+    }
+
+    highlight() {
+
+    }
 
     render() {
         return (
@@ -16,9 +26,9 @@ export default class SideMenu extends Component {
             <header>
             <Button type="zoom-in" onClick={this.zoomIn}/>
             <Button type="zoom-out" onClick={this.zoomOut}/>
-            <Button type="book" onClick={this.zoomIn}/>
-            <Button type="highlight" onClick={this.zoomIn}/>
-            <ColorSwitcher onClick={this.props.onClick}/>
+            <Button type="book" onClick={this.showLibrary}/>
+            <Button type="highlight" onClick={this.highlight}/>
+            <ColorSwitcher/>
             </header>
         </div>
         )

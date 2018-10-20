@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"private": false,
 	"main": "public/electron.js",
-	"proxy": "http://localhost:3001",
+	"proxy": http://localhost:3001,
 	"dependencies": {
 		"antd": "^3.9.2",
 		"electron-is-dev": "^0.3.0",
@@ -19,6 +19,7 @@
 	},
 	"scripts": {
 		"dev": "yarn react-scripts start",
+		"eject": "react-scripts eject"
 		"build": "react-scripts build",
 		"start": "concurrently \"cross-env BROWSER=none yarn react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
 		"pack": "electron-builder --dir",

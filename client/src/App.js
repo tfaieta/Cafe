@@ -10,20 +10,35 @@ class App extends Component {
         switchColor: false,
         users: []
     }
-}
+  }
 
-switchColor() {
-    this.setState({
-        switchColor: !this.state.switchColor
-    })
-}
+  componentDidMount() {
+    fetch('/users')
+      .then(res => res.json())
+      .then(users => this.setState({ users }))
+  }
 
-render() {
-    return (
+  switchColor() {
+      this.setState({
+          switchColor: !this.state.switchColor
+      })
+  }
+
+  render() {
+      return (
       <div className={this.state.switchColor ? "" : "sepia"}>
+        {/* TESTS API
+        <div style={{justifyContent: "center", alignItems: "center",  marginTop: 35}}>>
+          <p>USERS</p>
+          <ul> {
+            this.state.users.map(user =>
+              <li key={user.id}>{user.username}</li>
+            )}
+          </ul>
+        </div> */}
         <Main/>
       </div>
-    );
+  );
   }
 }
 
