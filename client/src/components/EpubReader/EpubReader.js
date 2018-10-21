@@ -15,11 +15,9 @@ import {
           storage && storage.getItem('epub-location')
             ? storage.getItem('epub-location')
             : 2,
-        largeText: false
       }
-      this.rendition = null
     }
-  
+
     onLocationChanged = location => {
       this.setState(
         {
@@ -30,15 +28,7 @@ import {
         }
       )
     }
-  
-    // Rendition == Text Size Manipulation
-    getRendition = rendition => {
-      // Set inital font-size, and add a pointer to rendition for later updates
-      const { largeText } = this.state
-      this.rendition = rendition
-      rendition.themes.fontSize(largeText ? '140%' : '100%')
-    }
-  
+
     render() {
       const { fullscreen, location } = this.state
       return (
@@ -49,11 +39,10 @@ import {
               locationChanged={this.onLocationChanged}
               title={'Alice in wonderland'}
               location={location}
-              getRendition={this.getRendition}
+              getRendition={this.props.textMultiplier}
             />
           </ReaderContainer>
           </div>
       )
     }
   }
-  
