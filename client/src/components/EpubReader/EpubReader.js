@@ -5,6 +5,7 @@ import {
   } from './Helper'
 
   const storage = global.localStorage || null
+  // url={'https://s3-eu-west-1.amazonaws.com/react-reader/alice.epub'}
 
   export default class EpubReader extends Component {
     constructor(props) {
@@ -45,7 +46,7 @@ import {
           <div>
           <ReaderContainer fullscreen={fullscreen}>
             <ReactReader
-              url={'https://s3-eu-west-1.amazonaws.com/react-reader/alice.epub'}
+              url={'./CommunistManifesto.epub'}
               locationChanged={this.onLocationChanged}
               title={'Alice in wonderland'}
               location={location}
