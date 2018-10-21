@@ -7,14 +7,9 @@ export default class SideMenu extends Component {
     constructor() {
       super()
 
-      this.zoomIn = this.zoomIn.bind(this)
       this.zoomOut = this.zoomOut.bind(this)
       this.showLibrary = this.showLibrary.bind(this)
       this.highlight = this.highlight.bind(this)
-    }
-
-    zoomIn() {
-            // TODO: Pass props in and zoom in
     }
 
     zoomOut() {
@@ -33,8 +28,8 @@ export default class SideMenu extends Component {
         return (
         <div>
             <header>
-            <Button type="zoom-in" onClick={this.zoomIn}/>
-            <Button type="zoom-out" onClick={this.zoomOut}/>
+            <Button type="zoom-in" onClick={this.props.zoomIn}/>
+            <Button type="zoom-out" onClick={this.props.zoomOut}/>
             <Button type="book" onClick={this.showLibrary}/>
             <Button type="highlight" onClick={this.highlight}/>
             <ColorSwitcher/>

@@ -9,6 +9,10 @@ const options = {
     cMapPacked: true,
   };
 
+  var textSize = 100;
+  var maxSize = 220;
+  var minSize = 50;
+
 export default class Main extends Component {
     constructor() {
         super()
@@ -20,8 +24,12 @@ export default class Main extends Component {
             file: '',
             dropzoneActive: false,
             defaultActive: true,
-            fill: '#fff'
+            fill: '#fff',
+
         }
+        this.rendition = null
+        this.clickZoom = this.clickZoom.bind(this)
+        this.clickShrink = this.clickShrink.bind(this)
     }
 
     onDocumentLoadSuccess = ({ numPages }) => {
@@ -33,7 +41,7 @@ export default class Main extends Component {
           dropzoneActive: true
         });
     }
-    
+
     onDragLeave() {
     this.setState({
         dropzoneActive: false
@@ -52,6 +60,31 @@ export default class Main extends Component {
         accept: event.target.value[0]
     });
     }
+
+    clickZoom() {
+      if (textSize <= maxSize){
+          var temp0 = textSize+10;
+          var temp1 = temp0.toString().concat('%');
+          this.rendition.themes.fontSize(temp1);
+          textSize += 10;
+      }
+    }
+
+    clickShrink() {
+      if (textSize >= minSize){
+          var temp2 = textSize-10;
+          var temp3 = temp2.toString().concat('%');
+          this.rendition.themes.fontSize(temp3);
+          textSize -= 10;
+      }
+    }
+
+
+
+    getRendition = rendition => {
+        // Set inital font-size, and add a pointer to rendition for later updates
+        this.rendition = rendition
+      }
 
     render() {
         const {accept, dropzoneActive, file, numPages, svg } = this.state;
@@ -77,10 +110,10 @@ export default class Main extends Component {
             onDragLeave={this.onDragLeave.bind(this)}
             >
             { dropzoneActive && <div style={overlayStyle}>Drop files...</div> }
-            <SideMenu/>
+            <SideMenu zoomIn={this.clickZoom} zoomOut={this.clickShrink} />
             {this.state.defaultActive ? <Opening/> : ""}
-            <EpubReader toggleFontSize={this.props.onToggleFontSize}/>
-            </Dropzone> 
+            <EpubReader textMultiplier={this.getRendition}/>
+            </Dropzone>
         </div>
         )
     }
