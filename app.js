@@ -86,7 +86,7 @@ pdf2html.pages('https://www.adobe.com/be_en/active-use/pdf/Alice_in_Wonderland.p
       ]
     };
 
-    new Epub(option, "./client/src/components/new.epub");
+    // new Epub(option, "./client/src/components/new.epub");
 })
   
 module.exports = app;
