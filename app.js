@@ -45,35 +45,49 @@ app.use(function(err, req, res, next) {
 const pdf2html = require('pdf2html')
 var Epub = require("epub-gen")
 var htmlArray = []; 
-
 const mercury = require('mercury-parser')('EapLnMDdyLoEBxWRYcCQOxItNxTwtEJj8I9XuN9G');
-
+var url = false
+var localHTML = []
 
 /**
  * LOGIC BEGIN
  */
-pdf2html.pages('CommunistManifesto.pdf', (err, htmlPages) => {
+pdf2html.pages('https://www.adobe.com/be_en/active-use/pdf/Alice_in_Wonderland.pdf', (err, htmlPages) => {
   if (err) {
     console.error('Conversion error: ' + err)
   } else {
     htmlArray = htmlPages
-    console.log(htmlArray.length)
-  }
-})
+    console.log('\t', htmlArray.length)
 
-/**
- *  CALLS MERCURY API
- */
-mercury.parse('').then(response =>
-  console.log(response)
-  ).catch(err => {
-    console.log('Error: ', err);
-})
+    /**
+     *  CALLS MERCURY API
+     **/
+    if (url == true) {
+      mercury.parse('https://www.cs.cmu.edu/~rgs/alice-table.html').then(response =>
+        local = response,
+        ).catch(err => {
+          console.log('\tError: ', err);
+        })
+      }
+    }
+    
+    var option = {
+      title: "Alice in Wonderland", // *Required, title of the book.
+      author: "Lewis Carroll", // *Required, name of the author.
+      publisher: "Macmillan & Co.", // optional
+      cover: "https://thebookwars.files.wordpress.com/2014/10/alice-1.jpg", // Url or File path, both ok.
+      content: [
+          {
+              title: "About the author", // Optional
+              author: "John Doe", // Optional
+              data: "<h2>Charles Lutwidge Dodgson</h2>"
+              +"<div lang=\"en\">Better known by the pen name Lewis Carroll...</div>" // pass html string
+          },
+      ]
+    };
 
-// // Goes through web parser
-// for(var i = 0; i < htmlArray.length; i++) { 
-  //   app.get()
-  // }
+    new Epub(option, ".client/src/components/EpubReader/new.epub");
+})
   
 module.exports = app;
   
