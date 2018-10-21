@@ -4,21 +4,15 @@ import SideMenu from '../SideMenu/SideMenu';
 import Opening from '../Opening/Opening';
 import EpubReader from '../EpubReader/EpubReader';
 
-const options = {
-    cMapUrl: 'cmaps/SideMenu.js/',
-    cMapPacked: true,
-  };
-
-  var textSize = 100;
-  var maxSize = 220;
-  var minSize = 50;
+var textSize = 100;
+var maxSize = 220;
+var minSize = 50;
 
 export default class Main extends Component {
     constructor() {
         super()
         this.state = {
             numPages: null,
-            svg: "svg",
             loaded: false,
             accept: '',
             file: '',
@@ -87,7 +81,7 @@ export default class Main extends Component {
       }
 
     render() {
-        const {accept, dropzoneActive, file, numPages, svg } = this.state;
+        const {accept, dropzoneActive, file, numPages } = this.state;
         const overlayStyle = {
           position: 'absolute',
           top: 0,

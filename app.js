@@ -57,7 +57,7 @@ pdf2html.pages('https://www.adobe.com/be_en/active-use/pdf/Alice_in_Wonderland.p
     console.error('Conversion error: ' + err)
   } else {
     htmlArray = htmlPages
-    console.log('\t', htmlArray.length)
+    console.log('\tAmount of PDF pages loaded: ', htmlArray.length)
 
     /**
      *  CALLS MERCURY API
@@ -70,7 +70,8 @@ pdf2html.pages('https://www.adobe.com/be_en/active-use/pdf/Alice_in_Wonderland.p
         })
       }
     }
-    
+    console.log('\tAmount of PDF2HTML: ', htmlArray.length)
+
     var option = {
       title: "Alice in Wonderland", // *Required, title of the book.
       author: "Lewis Carroll", // *Required, name of the author.
@@ -86,6 +87,7 @@ pdf2html.pages('https://www.adobe.com/be_en/active-use/pdf/Alice_in_Wonderland.p
       ]
     };
 
+    console.log('\tAmount of HTML2EPUB: 0')
     // new Epub(option, "./client/src/components/new.epub");
 })
   
