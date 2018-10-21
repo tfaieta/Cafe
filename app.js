@@ -6,7 +6,6 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var bs = require('./client/src/components/')
 
 var app = express();
 
@@ -87,7 +86,7 @@ pdf2html.pages('https://www.adobe.com/be_en/active-use/pdf/Alice_in_Wonderland.p
       ]
     };
 
-    new Epub(option, "/new.epub");
+    new Epub(option, "./client/src/components/new.epub");
 })
   
 module.exports = app;

@@ -45,7 +45,7 @@ import {
           <div>
           <ReaderContainer fullscreen={fullscreen}>
             <ReactReader
-              url={'./new.epub'}
+              url={'https://s3-eu-west-1.amazonaws.com/react-reader/alice.epub'}
               locationChanged={this.onLocationChanged}
               title={'Alice in wonderland'}
               location={location}
