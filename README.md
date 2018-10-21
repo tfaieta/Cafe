@@ -1,5 +1,6 @@
+<center>
 ![Pubber](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/700/055/datas/gallery.jpg)
-
+</center>
 
 # Inspiration
 As computer scientists, we are being trained to push technology farther and harder every day, and the educational tools used to engrain these skills into us has also advanced with our capabilities. However, despite of all the innovations made to our educational and everyday lives, we often choose to rely on the book for our consumption of literature, despite the fact that eBooks promise a cheaper, easier, and more intuitive experience. But ask anybody and the fact is clear that eBooks aren’t at all easy to use despite their promises. In fact, they usually make reading such a pain that many students would rather lug around ten-pound textbooks instead.
