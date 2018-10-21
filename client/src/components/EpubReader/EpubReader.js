@@ -5,7 +5,6 @@ import {
   } from './Helper'
 
   const storage = global.localStorage || null
-  // url={'https://s3-eu-west-1.amazonaws.com/react-reader/alice.epub'}
 
   export default class EpubReader extends Component {
     constructor(props) {
