@@ -105,7 +105,7 @@ export default class Main extends Component {
             >
             { dropzoneActive && <div style={overlayStyle}>Drop files...</div> }
             <SideMenu zoomIn={this.clickZoom} zoomOut={this.clickShrink} />
-            {this.state.defaultActive ? <Opening/> : ""}
+            {/* {this.state.defaultActive ? <Opening/> : ""} */}
             <EpubReader textMultiplier={this.getRendition}/>
             </Dropzone>
         </div>

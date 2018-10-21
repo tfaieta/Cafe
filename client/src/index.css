@@ -2,14 +2,28 @@
 
 body {
   margin: 0;
-  background-color: #0F111A;;
+  background-color: #111;;
   font-family: Tahoma, sans-serif;
 }
+
+/* DARK */
+/* #aaa */
+/* #111  */
+
+/* SEPIA */
+/* #F4ECD8 */
+
+/* NORMAL */
+/* #0F111A */
 
 .sepia body {
   margin: 0;
   background-color: #F4ECD8;
   font-family: Tahoma, sans-serif;
+}
+
+.titleArea {
+  color: #aaa
 }
 
 .Default {
