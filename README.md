@@ -11,3 +11,8 @@ An open-source and soon to be in production viewer for PDF's and EPUBS.
 
 ## Timeline
 * ~Convert PDF's into dark mode~
+* ~Build UI~
+* ~Have modern EPUB functionality~
+
+
+
