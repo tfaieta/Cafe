@@ -19,8 +19,7 @@ import {
     }
 
     onLocationChanged = location => {
-      this.setState(
-        {
+      this.setState({
           location
         },
         () => {
@@ -30,9 +29,6 @@ import {
     }
 
     render() {
-      // const override = {
-      //   backgroundColor: '#3e54213'
-      // }
       const { fullscreen, location } = this.state
       return (
           <div>
@@ -43,7 +39,6 @@ import {
               title={'Alice in wonderland'}
               location={location}
               getRendition={this.props.textMultiplier}
-              // styles={override}
             />
           </ReaderContainer>
           </div>

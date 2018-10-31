@@ -41,6 +41,8 @@ app.use(function(err, req, res, next) {
 
 /** 
  * BEGIN API WORK
+ * 
+ * TO BEGIN API: PORT=3001 DEBUG=pubber:* npm start
 */
 const pdf2html = require('pdf2html')
 var Epub = require("epub-gen")
