@@ -1,5 +1,5 @@
 {
-	"name": "pubber",
+	"name": "Cortado",
 	"version": "0.1.0",
 	"private": false,
 	"main": "public/electron.js",
