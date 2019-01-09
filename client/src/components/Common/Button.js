@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { Icon } from 'antd';
-// https://ant.design/components/icon/
-
 
 export default class Button extends Component {
   render() {
